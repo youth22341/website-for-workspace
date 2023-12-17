@@ -1,0 +1,17 @@
+body{
+    --back_color: bisque;
+    background-color: var(--back_color);
+}
+
+.Introduction h1{
+    color: var(--back_color);
+}
+
+.Content{
+    grid-area: Content;
+    color: purple;
+}
+
+.text{
+    background-color: greenyellow;
+}

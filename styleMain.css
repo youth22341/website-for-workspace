@@ -1,0 +1,109 @@
+body{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 16px;
+    text-align: justify;
+    overflow: auto;
+}
+
+.Container{
+    display: grid;
+    grid-template-areas: 
+    "Title"
+    "Content"
+    "Contact";
+}
+
+.Title{
+    grid-area: Title;
+    font-size: 20px;
+    font-weight: bold;
+    color: purple; 
+    text-align: center;
+}
+
+.box_title{
+    border: 2px solid black;
+    background-color: rgb(0, 179, 255);
+}
+
+.Content{
+    grid-area: Content;
+    display: flex;
+    flex-direction: column;
+}
+
+.Information{
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.box_information{
+    border: 0 solid black;
+    background-color: aquamarine;  
+    border-collapse: collapse;
+}
+
+.Introduction{
+    text-align: justify;
+    background-color: bisque;
+    color:red;
+    padding: 10px;
+}
+
+.mainStory{
+   background-color: antiquewhite;
+   padding: 10px;
+}
+
+.mainStory u{
+    color:sienna;
+    font-weight: bold;
+}
+
+.Contact{
+    background-color:lavender; 
+    grid-area: Contact;
+    display: grid; 
+    grid-template-areas: 
+    "text text text"
+    "image image image";  
+    justify-items: center;
+    align-items: center; 
+}
+
+.box_contact{
+    border: 3px solid red;
+    color: white;
+    background-color:lightpink;
+    padding:2px;
+}
+
+.chanel_text{
+    grid-area: text;
+}
+
+.chanel_img-1 .chanel_img-2 .chanel_img-3{
+    grid-area: image;
+}
+
+hr{
+    width: 100%;
+    border: 1px dotted orange;
+    font-weight: bold;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    column-gap: 2px;
+    row-gap: 2px;
+}
+
+.article{
+    border: 2px solid red;
+    background-color:beige;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}

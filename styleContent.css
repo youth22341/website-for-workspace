@@ -1,0 +1,94 @@
+body{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 16px;
+    text-align: justify;
+    overflow:auto;
+    --min_column_length:450px;
+}
+
+.Container{
+    display: grid;
+    grid-template-areas: 
+    "Introduction"
+    "Content"
+    "lastTalk";
+    grid-auto-columns:minmax(var(--min_column_length+40),1fr);
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    grid-auto-flow: row;
+}
+
+.Introduction{
+    grid-area: Introduction;
+    text-align: center;
+    border: 2px dotted yellow;
+    background-color: slategray;
+    padding: 10px 20px;
+}
+
+/*border of Content block*/
+.around{
+    border: 2px dashed red;
+    padding: 10px 20px;
+}
+
+.around p, .around picture{
+    text-indent: 20px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(var(--min_column_length),auto));
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.picture{
+    text-align: center;
+    color: black;
+    font-style: italic;
+}
+
+.picture img{
+    width: 80%;
+    height: 80%;
+    transition: width 5s, height 5s;
+}
+
+.picture img:hover{
+    width: 150%;
+    height: 150%;
+}
+
+.lastTalk{
+    grid-area: lastTalk;
+    display: grid;
+    grid-template-areas: 
+    "text text"
+    "backHome backHome";
+}
+
+.text{
+    grid-area: text;
+    font-style: italic;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.backHome{
+    grid-area: backHome;
+    justify-self: flex-end;
+}
+
+button{
+    background-color: white;
+    transition: background-color 2s;
+}
+
+button:hover{
+    background-color: yellow;
+}
+
